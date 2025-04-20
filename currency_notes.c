@@ -15,12 +15,12 @@ int main() {
     note_10 = remaining / 10;
     remaining = remaining % 10;
 
-    printf("Number of ₹100 notes: %d\n", note_100);
-    printf("Number of ₹50 notes: %d\n", note_50);
-    printf("Number of ₹10 notes: %d\n", note_10);
+    printf("Number of 100rs notes: %d\n", note_100);
+    printf("Number of 50rs notes: %d\n", note_50);
+    printf("Number of 10rs notes: %d\n", note_10);
 
     if (remaining != 0) {
-        printf("Remaining ₹%d cannot be given with available denominations.\n", remaining);
+        printf("Remaining %d cannot be given with available denominations.\n", remaining);
     }
 
     return 0;
