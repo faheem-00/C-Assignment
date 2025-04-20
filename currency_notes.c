@@ -1,12 +1,27 @@
 #include <stdio.h>
 
-int main(){
-    int wd_amount, h_notes;
-    
-    printf("Enter the amount to be withdrawed in hundreds: ");
-    scanf("%d", &wd_amount);
+int main() {
+    int amount, note_100, note_50, note_10, remaining;
 
-    h_notes= wd_amount/100;
+    printf("Enter the amount to withdraw (in ₹): ");
+    scanf("%d", &amount);
 
-    printf("There are %d hundred notes in your amount.", h_notes);
+    note_100 = amount / 100;
+    remaining = amount % 100;
+
+    note_50 = remaining / 50;
+    remaining = remaining % 50;
+
+    note_10 = remaining / 10;
+    remaining = remaining % 10;
+
+    printf("Number of ₹100 notes: %d\n", note_100);
+    printf("Number of ₹50 notes: %d\n", note_50);
+    printf("Number of ₹10 notes: %d\n", note_10);
+
+    if (remaining != 0) {
+        printf("Remaining ₹%d cannot be given with available denominations.\n", remaining);
+    }
+
+    return 0;
 }
